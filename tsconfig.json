@@ -16,7 +16,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@nx07/material": ["libs/material/src/index.ts"]
+      "@nx07/material": ["libs/material/src/index.ts"],
+      "@nx07/core-data": ["libs/core-data/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
