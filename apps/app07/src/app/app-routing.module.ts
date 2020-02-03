@@ -7,7 +7,7 @@ import { ProjectComponent } from './projects/project/project.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 const routes = [
-  { path: '', component: ProjectsComponent }, 
+  { path: '', component: ProjectsComponent },
   { path: 'projects', component: ProjectsComponent },
   { path: 'projects/:id', component: ProjectComponent},
   { path: '**', component: PageNotFoundComponent }
@@ -22,4 +22,4 @@ const routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-``
+
