@@ -15,6 +15,10 @@ export class ProjectsService {
     return this.httpClient.get(this.projectsUrl);
   }
 
+  getProject(id) {
+    return this.httpClient.get(this.projectsUrl + '/' + id);
+  }
+
   createProject(project: Project) {
     return this.httpClient.post(this.projectsUrl, project);
   }
@@ -28,4 +32,3 @@ export class ProjectsService {
   }
 }
 
-    

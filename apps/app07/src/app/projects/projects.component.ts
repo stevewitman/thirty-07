@@ -76,4 +76,9 @@ export class ProjectsComponent implements OnInit {
     this.selectProject(emptyProject);
   }
 
+  deleteProject(project) {
+    this.projectsService.deleteProject(project.id)
+      .subscribe(result => this.getProjects());
+  }
+
 }
