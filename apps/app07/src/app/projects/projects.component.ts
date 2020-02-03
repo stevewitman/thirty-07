@@ -40,13 +40,40 @@ export class ProjectsComponent implements OnInit {
     })
   }
 
-  updateProject(project) {
-    console.log('updateProject:', project)
+  saveProject(project: Project) {
+    if (!project.id) {
+      this.createProject(project);
+    } else {
+      this.updateProject(project);
+    }
+  }
 
+  createProject(project) {
+    this.projectsService.createProject(project)
+      .subscribe(result => {
+        this.getProjects();
+      });
+  }
+
+  updateProject(project) {
     this.projectsService.updateProject(project)
       .subscribe(result => {
         this.getProjects();
       });
+  }
+
+  cancel () {
+    this.resetProject();
+  }
+
+  resetProject() {
+    const emptyProject: Project = {
+      id: null,
+      title: '',
+      details: '',
+      importanceLevel: 0
+    }
+    this.selectProject(emptyProject);
   }
 
 }

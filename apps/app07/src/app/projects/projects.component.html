@@ -9,7 +9,8 @@
     <nx07-project-detail
       [form]="form"
       [project]="selectedProject"
-      (saving)="updateProject($event)"
+      (saving)="saveProject($event)"
+      (cancelling)="cancel()"
     ></nx07-project-detail>
   </div>
 </div>
