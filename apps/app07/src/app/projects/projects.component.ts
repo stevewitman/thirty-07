@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { ProjectsService } from '@nx07/core-data';
+import { ProjectsService, Project } from '@nx07/core-data';
 
 @Component({
   selector: 'nx07-projects',
@@ -9,6 +9,7 @@ import { ProjectsService } from '@nx07/core-data';
 })
 export class ProjectsComponent implements OnInit {
   projects$;
+  selectedProject: Project;
 
   constructor(private projectsService: ProjectsService) { }
 
@@ -18,6 +19,10 @@ export class ProjectsComponent implements OnInit {
 
   getProjects() {
     this.projects$ = this.projectsService.getProjects();
+  }
+
+  selectProject(project: Project) {
+    this.selectedProject = project;
   }
 
 }

@@ -1,1 +1,31 @@
-<p>project-detail works!</p>
+<mat-card class="example-card">
+  <mat-card-header>
+    <mat-card-title>Project Details</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+      <div>
+        <p>Id: {{ currentProject.id }}</p>
+        <mat-form-field class="full-width">
+          <input
+            matInput
+            type="text"
+            placeholder="Title"
+            name="title">
+        </mat-form-field>
+        <mat-form-field class="full-width">
+          <input
+            matInput
+            type="text"
+            placeholder="Description"
+            name="details">
+        </mat-form-field>
+      </div>
+      <div align="end">
+        <mat-card-actions>
+          <button mat-raised-button>Clear</button>
+          <button mat-raised-button>Save</button>
+        </mat-card-actions>
+      </div>
+
+  </mat-card-content>
+</mat-card>
