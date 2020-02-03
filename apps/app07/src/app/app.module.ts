@@ -12,6 +12,7 @@ import { ProjectDetailComponent } from './projects/project-detail/project-detail
 import { ProjectComponent } from './projects/project/project.component';
 import { ProjectsListComponent } from './projects/projects-list/projects-list.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { UiLoginModule } from '@nx07/ui-login';
 
 @NgModule({
   declarations: [AppComponent, ProjectsComponent, ProjectDetailComponent, ProjectComponent, ProjectsListComponent, PageNotFoundComponent],
@@ -22,7 +23,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     FormsModule,
     HttpClientModule,
     MaterialModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    UiLoginModule
   ],
   exports: [AppRoutingModule],
   providers: [],
